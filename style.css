@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  background-color: #1111;
+}
+
+.game-page{
+  position: absolute;
+  top: 3%;
+  height: 700px;
+  width: 90%;
+  left: 5%;
+  background-color: #1111;
+  font-size: 20px;
+  border: 1px solid rgb(194, 194, 194);
+}
+
+.Stone , .Paper , .Scissor{
+  margin: 10px;
+  border-radius: 100px;
+  height: 100px;
+  width: 100px;
+
+  &:hover{
+    background-color: rgb(249, 255, 220);
+  }
+}
+
+.Stone img ,.Paper img ,.Scissor img {
+  height: 60px;
+  width: 60px;
+}
+
+.reset button{
+  padding:5px 10px;
+  margin: 20px;
+  font-size: 25px;
+  border: 2px solid;
+  border-radius: 20px;
+  font-weight: 600;
+
+  &:hover{
+    background-color: rgb(195, 255, 195);
+  }
+}

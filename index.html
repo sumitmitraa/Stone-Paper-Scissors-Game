@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>stone_paper_scissor</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    
+
+  </style>
+</head>
+<body>
+<div class="game-page">
+  <h1>✨ Stone Paper Scissors Game ✨</h1>
+
+  <div class="buttons">
+  <button class="Stone" onclick="
+  let computerChoice = generateComputerChoice();
+  let resultMsg = getResult('Stone', computerChoice);
+  showResult('Stone', computerChoice, resultMsg);
+  "><img src="images/stone.png" alt="Stone"></button>
+
+  <button class="Paper" onclick="
+    computerChoice = generateComputerChoice();
+    resultMsg = getResult('Paper', computerChoice);
+    showResult('Paper', computerChoice, resultMsg);
+  "><img src="images/paper.png" alt="Paper"></button>
+
+  <button class="Scissor" onclick="
+    computerChoice = generateComputerChoice();
+    resultMsg = getResult('Scissor', computerChoice);
+    showResult('Scissor', computerChoice, resultMsg);
+  "><img src="images/scissor.png" alt="Scissor"></button>
+  </div>
+
+  <div class="reset">
+    <button onclick="localStorage.clear() ,resetScore();
+     document.querySelector('.user-move').innerText=''
+     document.querySelector('.computer-move').innerText=``
+     document.querySelector('.result').innerText=``
+     document.querySelector('.score').innerText=`Score : Won: 0, Lost: 0, Tie: 0`">Reset 🙄</button>   
+  </div>
+
+  <div class="result-page">
+    <h3 class="user-move"></h3>
+    <h3 class="computer-move"></h3>
+    <h2 class="result"></h2>
+    <h2 class="score"></h2>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
